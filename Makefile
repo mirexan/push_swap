@@ -6,13 +6,13 @@
 #    By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:11:29 by mregada-          #+#    #+#              #
-#    Updated: 2025/04/05 12:20:46 by mregada-         ###   ########.fr        #
+#    Updated: 2025/04/07 16:53:13 by mregada-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## VARIABLES ##
 
-NAME = pushswap.a
+NAME = pushswap
 HEADRS = push_swap.h
 
 ## ARCHIVOS FUENTE ##

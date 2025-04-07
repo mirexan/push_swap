@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Push_swap.h                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 11:59:31 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/07 17:54:55 by mregada-         ###   ########.fr       */
+/*   Created: 2025/04/07 17:33:07 by mregada-          #+#    #+#             */
+/*   Updated: 2025/04/07 18:36:50 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
-# include "SRCS_LIBFT/libft.h"
+# include "../push_swap.h"
 
-typedef struct s_stack
-{
-	int	num;
-	struct s_stack	*next;
-}	t_stack;
+int ft_atoi(const char *str);
+void	ft_putnbr_fd(int n, int fd);
+char	**ft_split(char const *s, char c);
+void	*ft_add_to_stack(t_stack **stack, int num);
 
 #endif

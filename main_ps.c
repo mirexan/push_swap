@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Push_swap.h                                        :+:      :+:    :+:   */
+/*   main_ps.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 11:59:31 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/07 17:54:55 by mregada-         ###   ########.fr       */
+/*   Created: 2025/04/07 16:53:55 by mregada-          #+#    #+#             */
+/*   Updated: 2025/04/07 17:00:51 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include "SRCS_LIBFT/libft.h"
-
-typedef struct s_stack
+int	main(int argc, char *argv[])
 {
-	int	num;
-	struct s_stack	*next;
-}	t_stack;
+	if (argc < 2)
+		return (0);
+}
 
-#endif
