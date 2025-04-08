@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
+/*   By: mregada- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 11:59:31 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/07 17:54:55 by mregada-         ###   ########.fr       */
+/*   Created: 2024/10/09 17:26:29 by mregada-          #+#    #+#             */
+/*   Updated: 2024/11/14 19:42:59 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
+#include "../ft_printf.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include <unistd.h>
-# include <stdlib.h>
-# include "SRCS_LIBFT/libft.h"
-
-typedef struct s_stack
+int	ft_putstr_fd(char *s, int fd)
 {
-	int	num;
-	struct s_stack	*next;
-}	t_stack;
+	int	len;
+	int	i;
 
-#endif
+	len = ft_strlen(s);
+	i = 0;
+	while (i < len)
+	{
+		if ((write (fd, &s[i], 1)) == -1)
+			return (-1);
+		i++;
+	}
+	return (0);
+}

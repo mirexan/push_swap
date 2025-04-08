@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 17:33:07 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/08 20:24:50 by mregada-         ###   ########.fr       */
+/*   Created: 2025/02/04 16:39:52 by mregada-          #+#    #+#             */
+/*   Updated: 2025/02/08 12:31:15 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-
-typedef struct s_stack
+void	ft_lstclear(t_stack **stack)
 {
-	int	num;
-	struct s_stack	*next;
-}	t_stack;
-
-int ft_atoi(const char *str);
-char	**ft_split(char const *s, char c);
-void	ft_add_to_stack(t_stack **stack, int num);
-void	ft_lstclear(t_stack **stack);
-
-#endif
+	t_stack	*tmp;
+	
+	if (!stack || !*stack)
+		return;
+	while (*stack)
+	{
+		tmp = (*stack)->next;
+		free (*stack);
+		*stack = tmp;
+	}
+	*stack = NULL;
+}
