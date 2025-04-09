@@ -6,7 +6,7 @@
 #    By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:11:29 by mregada-          #+#    #+#              #
-#    Updated: 2025/04/09 19:26:58 by mregada-         ###   ########.fr        #
+#    Updated: 2025/04/09 20:16:09 by mregada-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ SRCS =  $(SRCS_DIR)/ft_add_to_stack.c $(SRCS_DIR)/ft_atoi.c \
 		$(PRINTF_DIR)/pointer_handler.c $(PRINTF_DIR)/ft_printf.c \
 		$(PRINTF_DIR)/ft_putdec.c $(PRINTF_DIR)/str_handler.c \
 		$(PRINTF_DIR)/Libft_src/ft_itoa.c $(PRINTF_DIR)/Libft_src/ft_strlen.c \
-		$(PRINTF_DIR)/Libft_src/ft_putchar_fd.c main_ps.c \
-		$(PRINTF_DIR)/Libft_src/ft_putstr_fd.c 
+		$(PRINTF_DIR)/Libft_src/ft_putchar_fd.c main_ps.c  ft_treat_args.c \
+		$(PRINTF_DIR)/Libft_src/ft_putstr_fd.c $(SRCS_DIR)/ft_free_split.c  
 
 OBJS = $(SRCS:.c=.o)
 
