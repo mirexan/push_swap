@@ -6,19 +6,33 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:53:55 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/09 21:32:03 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/16 21:24:49 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+static void	ft_printstack(t_stack *stack)
+{
+	t_stack	*actual;
+	int i;
+	
+	actual = stack;
+	i = 1;
+	while (actual)
+	{
+		ft_printf("Posicion %d: %d\n", i, actual->num);
+		actual = actual->next;
+		i++;
+	}
+}
 
 int	main(int argc, char *argv[])
 {	
 	t_stack	*stack_a;
-	t_stack	*actual;
-	int	i;
-	
+	t_stack *stack_b;
+
+	stack_b = NULL;	
 	if (argc < 2)
 		return (0);
 	stack_a = ft_treat_args(argc,argv);
@@ -27,15 +41,16 @@ int	main(int argc, char *argv[])
 		ft_printf("Error\n");
 		return (1);
 	}
-	i = 1;
-	actual = stack_a;
-	while(actual)
-	{
-		ft_printf("Posicion %d: %d\n", i, actual->num);
-		actual = actual->next;
-		i++;
-	}
+	ft_printstack(stack_a);	
+	//ft_swap(&stack_a);
+	ft_push(&stack_b, &stack_a);
+	ft_rev_rotate(&stack_a);
+	ft_printf("El stack a es :\n");
+	ft_printstack(stack_a);
+	ft_printf("El stack b es :\n");
+	ft_printstack(stack_b);
 	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 	return (0);
 }
 

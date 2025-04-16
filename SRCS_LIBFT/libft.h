@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:33:07 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/09 19:42:50 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/16 21:23:49 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,9 @@ char	**ft_split(char const *s, char c);
 void	ft_add_to_stack(t_stack **stack, int num);
 void	ft_lstclear(t_stack **stack);
 void	ft_free_split(char **split);
+void	ft_swap(t_stack **stack);
+void	ft_push(t_stack **taker, t_stack **giver);
+void	ft_rotate(t_stack **stack);
+void	ft_rev_rotate(t_stack **stack);
 
 #endif
