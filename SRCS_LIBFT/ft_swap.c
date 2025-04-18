@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:47:20 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/16 18:31:49 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/18 18:41:50 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_swap(t_stack **stack)
 {
+	t_stack	*ptr;
+	int		t;
+	int		d;
+
 	if ((*stack)->next != NULL)
 	{
-		t_stack	*ptr;
-		int t;
-		int d;
-
 		t = (*stack)->num;
 		ptr = *stack;
 		ptr = (*stack)->next;
@@ -28,6 +28,5 @@ void	ft_swap(t_stack **stack)
 		(*stack)->num = d;
 	}
 	else
-		return;
+		return ;
 }
-
