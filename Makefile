@@ -6,7 +6,7 @@
 #    By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:11:29 by mregada-          #+#    #+#              #
-#    Updated: 2025/04/18 20:41:03 by mregada-         ###   ########.fr        #
+#    Updated: 2025/04/20 20:58:39 by mregada-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS =  $(SRCS_DIR)/ft_add_to_stack.c $(SRCS_DIR)/ft_atoi.c $(SRCS_DIR)/ft_push.
 		$(PRINTF_DIR)/Libft_src/ft_putchar_fd.c main_ps.c  ft_treat_args.c \
 		$(PRINTF_DIR)/Libft_src/ft_putstr_fd.c $(SRCS_DIR)/ft_free_split.c \
 		$(SRCS_DIR)/ft_rotate.c $(SRCS_DIR)/ft_rev_rotate.c \
-		$(SRCS_DIR)/ft_add_index.c
+		$(SRCS_DIR)/ft_add_index.c $(SRCS_DIR)/ft_is_sorted.c
 		 
 
 OBJS = $(SRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:53:55 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/18 21:01:57 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/20 21:34:58 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,16 @@ int	main(int argc, char *argv[])
 	}
 	ft_add_index(stack_a);
 	ft_printstack(stack_a);
+	if (ft_is_sorted(stack_a))
+			ft_printf("already sorted, no moves needed\n");
+	ft_printf("stack size is %d\n", ft_stack_size(stack_a));
 	//ft_swap(&stack_a);
-	ft_push(&stack_b, &stack_a);
-	ft_rev_rotate(&stack_a);
+	//ft_push(&stack_b, &stack_a);
+	/*ft_rev_rotate(&stack_a);
 	ft_printf("El stack a es :\n");
 	ft_printstack(stack_a);
 	ft_printf("El stack b es :\n");
-	ft_printstack(stack_b);
+	ft_printstack(stack_b);*/
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 	return (0);
