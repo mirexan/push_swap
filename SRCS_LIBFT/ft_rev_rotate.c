@@ -6,11 +6,30 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 21:15:28 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/18 18:38:43 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/22 19:56:01 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	rra(t_stack **stack_a)
+{
+	ft_rev_rotate(stack_a);
+	ft_printf("rra\n");
+}
+
+void	rrb(t_stack **stack_b)
+{
+	ft_rev_rotate(stack_b);
+	ft_printf("rrb\n");
+}
+
+void	rrr(t_stack **stack_a, t_stack **stack_b)
+{
+	ft_rev_rotate(stack_a);
+	ft_rev_rotate(stack_b);
+	ft_printf("rrr\n");
+}
 
 void	ft_rev_rotate(t_stack **stack)
 {

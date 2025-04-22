@@ -6,28 +6,32 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:48:37 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/18 18:44:25 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/22 19:28:21 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-static void	ft_lstadd_front(t_stack **taker, t_stack *new)
+void	pa(t_stack **stack_b, t_stack **stack_a)
 {
-	if (!taker || !new)
-		return ;
-	new->next = *taker;
-	*taker = new;
+	ft_push(stack_b, stack_a);
+	ft_printf("pa\n");
 }
 
-void	ft_push(t_stack **taker, t_stack **giver)
+void	pb(t_stack **stack_a, t_stack **stack_b)
+{
+	ft_push(stack_a, stack_b);
+	ft_printf("pb\n");
+}
+
+void	ft_push(t_stack **taker, t_stack **receiver)
 {
 	t_stack	*newnode;
 
-	if (*giver)
-	{
-		newnode = *giver;
-		*giver = (*giver)->next;
-		ft_lstadd_front(taker, newnode);
-	}
+	if (!*taker)
+		return;
+	newnode = *taker; //nos llevamos el nodo a mandar
+	*taker = (*taker)->next; // situamos el siguiente nodo del stack como primero
+	newnode->next = *receiver; // el segundo nodo sera el primero del stack receptor
+	*receiver = newnode; // el primer nodo pasa a ser el nodo a mandar
 }
