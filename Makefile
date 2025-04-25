@@ -6,13 +6,13 @@
 #    By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:11:29 by mregada-          #+#    #+#              #
-#    Updated: 2025/04/25 19:50:42 by mregada-         ###   ########.fr        #
+#    Updated: 2025/04/25 22:30:28 by mregada-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## VARIABLES ##
 
-NAME = pushswap
+NAME = push_swap
 HEADRS = push_swap.h
 SRCS_DIR = SRCS_LIBFT
 PRINTF_DIR = ft_printf
@@ -29,7 +29,7 @@ SRCS =  $(SRCS_DIR)/ft_add_to_stack.c $(SRCS_DIR)/ft_atoi.c $(SRCS_DIR)/ft_push.
 		$(PRINTF_DIR)/Libft_src/ft_putstr_fd.c $(SRCS_DIR)/ft_free_split.c \
 		$(SRCS_DIR)/ft_rotate.c $(SRCS_DIR)/ft_rev_rotate.c \
 		$(SRCS_DIR)/ft_add_index.c $(SRCS_DIR)/ft_is_sorted.c \
-		$(SRCS_DIR)/ft_small_sort.c
+		$(SRCS_DIR)/ft_small_sort.c $(SRCS_DIR)/ft_radix.c
 		 
 
 OBJS = $(SRCS:.c=.o)

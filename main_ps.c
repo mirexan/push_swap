@@ -6,13 +6,13 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:53:55 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/25 20:11:35 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/25 22:38:03 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_printstack(t_stack *stack)
+/*static void	ft_printstack(t_stack *stack)
 {
 	t_stack	*actual;
 	int		i;
@@ -25,7 +25,7 @@ static void	ft_printstack(t_stack *stack)
 		actual = actual->next;
 		i++;
 	}
-}
+}*/
 
 int	main(int argc, char *argv[])
 {
@@ -42,10 +42,13 @@ int	main(int argc, char *argv[])
 		return (1);
 	}
 	ft_add_index(stack_a);
-	ft_printstack(stack_a);
+	//ft_printstack(stack_a);
 	if (ft_is_sorted(stack_a))
-			ft_printf("already sorted, no moves needed\n");
-	ft_printf("stack size is %d\n", ft_stack_size(stack_a));
+	{
+		//ft_printf("already sorted, no moves needed\n");
+		return (0);
+	}
+	//ft_printf("stack size is %d\n", ft_stack_size(stack_a));
 	//ft_swap(&stack_a);
 	//pa(&stack_b, &stack_a);
 	/*pb(&stack_a, &stack_b);
@@ -53,9 +56,12 @@ int	main(int argc, char *argv[])
 	rrb(&stack_b);
 	rrr(&stack_a, &stack_b);*/
 	//ft_rev_rotate(&stack_a);
-	ft_small_sort(&stack_a, &stack_b);
-	ft_printf("El stack a es :\n");
-	ft_printstack(stack_a);
+	if (ft_stack_size(stack_a) <= 5)
+		ft_small_sort(&stack_a, &stack_b);
+	else
+		ft_radix(&stack_a, &stack_b);
+	//ft_printf("El stack a es :\n");
+	//ft_printstack(stack_a);
 	//ft_printf("El stack b es :\n");
 	//ft_printstack(stack_b);
 	ft_lstclear(&stack_a);
