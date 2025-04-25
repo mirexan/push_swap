@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:33:07 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/22 19:58:05 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/25 19:48:36 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	ft_add_index(t_stack *stack);
 int		ft_is_sorted(t_stack *stack_a);
 int		ft_stack_size(t_stack *stack);
+void	ft_small_sort(t_stack **stack_a, t_stack **stack_b);
 
 #endif
