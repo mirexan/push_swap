@@ -6,7 +6,7 @@
 #    By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 12:11:29 by mregada-          #+#    #+#              #
-#    Updated: 2025/04/25 22:30:28 by mregada-         ###   ########.fr        #
+#    Updated: 2025/04/26 18:29:26 by mregada-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ PRINTF_DIR = ft_printf
 
 ## ARCHIVOS FUENTE ##
 
-SRCS =  $(SRCS_DIR)/ft_add_to_stack.c $(SRCS_DIR)/ft_atoi.c $(SRCS_DIR)/ft_push.c \
+SRCS =  $(SRCS_DIR)/ft_add_to_stack.c $(SRCS_DIR)/ft_int_atoi.c $(SRCS_DIR)/ft_push.c \
 		$(SRCS_DIR)/ft_lstclear.c $(SRCS_DIR)/ft_split.c $(SRCS_DIR)/ft_swap.c \
 		$(PRINTF_DIR)/char_handler.c $(PRINTF_DIR)/ft_puthex.c \
 		$(PRINTF_DIR)/pointer_handler.c $(PRINTF_DIR)/ft_printf.c \
@@ -40,7 +40,7 @@ CFLAGS = -Wall -Werror -Wextra -g -I. -I$(PRINTF_DIR)
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) Makefile $(HEADRS)
 		clang $(CFLAGS) $(OBJS) -o $(NAME)
 
 

@@ -6,7 +6,7 @@
 /*   By: mregada- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:27:21 by mregada-          #+#    #+#             */
-/*   Updated: 2024/10/17 18:50:49 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/29 19:36:41 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,8 +103,6 @@ char	**ft_split(char const *s, char c)
 	i = analizar_palabras (s, c, resultado);
 	if (i == 0)
 	{
-		while (resultado[i] != NULL)
-			free (resultado[i++]);
 		free (resultado);
 		return (NULL);
 	}

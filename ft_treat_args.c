@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 19:49:28 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/18 18:28:36 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/29 19:14:47 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,17 @@ static int	ft_isduplicate(t_stack *stack)
 
 static int	ft_fill_from_argv(char **argv, int start, t_stack **stack)
 {
+	long	num;
+
+	num = 0;
 	while (argv[start])
 	{
 		if (!ft_isnum(argv[start]))
 			return (0);
-		ft_add_to_stack(stack, ft_atoi(argv[start]));
+		num = ft_int_atoi(argv[start]);
+		if (num > 2147483647 || num < -2147483648)
+			return (0);
+		ft_add_to_stack(stack, num);
 		start++;
 	}
 	return (1);
@@ -64,14 +70,19 @@ static int	ft_fill_from_argv(char **argv, int start, t_stack **stack)
 
 static int	ft_fill_from_split(char **split, t_stack **stack)
 {
-	int	i;
+	int		i;
+	long	num;
 
+	num = 0;
 	i = 0;
 	while (split[i])
 	{
 		if (!ft_isnum(split[i]))
 			return (0);
-		ft_add_to_stack(stack, ft_atoi(split[i]));
+		num = ft_int_atoi(split[i]);
+		if (num > 2147483647 || num < -2147483648)
+			return (0);
+		ft_add_to_stack(stack, num);
 		i++;
 	}
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 17:33:07 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/25 22:22:11 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:14:02 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-int		ft_atoi(const char *str);
+long	ft_int_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 void	ft_add_to_stack(t_stack **stack, int num);
 void	ft_lstclear(t_stack **stack);

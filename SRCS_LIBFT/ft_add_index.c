@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:48:36 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/20 21:31:20 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:40:01 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_stack_size(t_stack *stack)
 {
-	int	size;
+	int		size;
 	t_stack	*tmp;
-	
+
 	size = 0;
 	tmp = stack;
 	while (tmp)
@@ -38,7 +38,7 @@ static void	ft_fill_array(t_stack *stack, int *arr)
 	{
 		arr[i] = tmp->num;
 		tmp = tmp->next;
-		i++; 
+		i++;
 	}
 }
 

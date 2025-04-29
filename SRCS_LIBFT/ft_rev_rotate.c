@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 21:15:28 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/22 19:56:01 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:36:50 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ void	ft_rev_rotate(t_stack **stack)
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	iter = *stack;
-	while (iter->next->next)//iteramos hasta el penultimo
+	while (iter->next->next)
 		iter = iter->next;
-	firstnode = iter->next;//guardamos el ultimo en el futuro primero
-	iter->next = NULL;// cortamos el enlace del ultimo nodo par ano generar bucle
-	firstnode->next = *stack; //enlazamos la primera posicion
-	*stack = firstnode;// situamos primera posicion en stack original
+	firstnode = iter->next;
+	iter->next = NULL;
+	firstnode->next = *stack;
+	*stack = firstnode;
 }

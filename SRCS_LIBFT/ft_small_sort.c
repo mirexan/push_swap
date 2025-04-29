@@ -6,7 +6,7 @@
 /*   By: mregada- <mregada-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 20:17:12 by mregada-          #+#    #+#             */
-/*   Updated: 2025/04/25 21:07:57 by mregada-         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:41:14 by mregada-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	ft_sort_three(t_stack **stack_a)
 	k = (*stack_a)->index;
 	l = (*stack_a)->next->index;
 	m = (*stack_a)->next->next->index;
-	if (k < m && k > l)//movimientos segun indice
+	if (k < m && k > l)
 		sa(stack_a);
 	else if (k < l && k > m)
 		rra(stack_a);
@@ -76,20 +76,20 @@ static void	ft_sort_four(t_stack **stack_a, t_stack **stack_b)
 	while (tmp)
 	{
 		if (tmp->index == 0)
-			pos = i; //identificamos posicion de indice 0
+			pos = i;
 		i++;
 		tmp = tmp->next;
 	}
 	i = 0;
-	if (pos <= 2) //si pos <=2 hacemos ra pos -1(por numeracion) veces
+	if (pos <= 2)
 		while (i++ < pos)
 			ra(stack_a);
 	else
 		while (i++ < 4 - pos)
 			rra(stack_a);
-	pb(stack_a, stack_b);// separamos el indice 0
-	ft_sort_three(stack_a);//ordenamos los 3 de stack_a
-	pa(stack_b, stack_a);//devolvemos indice 0
+	pb(stack_a, stack_b);
+	ft_sort_three(stack_a);
+	pa(stack_b, stack_a);
 }
 
 static void	ft_sort_five(t_stack **stack_a, t_stack **stack_b)
@@ -97,7 +97,7 @@ static void	ft_sort_five(t_stack **stack_a, t_stack **stack_b)
 	ft_push_smaller(stack_a, stack_b, 0);
 	ft_push_smaller(stack_a, stack_b, 1);
 	if (!ft_is_sorted(*stack_a))
-		ft_sort_three(stack_a);//reutilizamos ft_sort_three
+		ft_sort_three(stack_a);
 	pa(stack_b, stack_a);
 	pa(stack_b, stack_a);
 }
