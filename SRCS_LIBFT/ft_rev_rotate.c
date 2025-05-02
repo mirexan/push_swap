@@ -39,10 +39,10 @@ void	ft_rev_rotate(t_stack **stack)
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	iter = *stack;
-	while (iter->next->next)
+	while (iter->next->next) //iteramos hasta el penultimo
 		iter = iter->next;
-	firstnode = iter->next;
-	iter->next = NULL;
-	firstnode->next = *stack;
-	*stack = firstnode;
+	firstnode = iter->next; //guardamos el ultimo en el futuro primero
+	iter->next = NULL;// cortamos el enlace del ultimo nodo para no generar bucle
+	firstnode->next = *stack; //enlazamos la primera posicion
+	*stack = firstnode; // situamos primera posicion en stack original
 }

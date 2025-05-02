@@ -38,11 +38,10 @@ void	ft_rotate(t_stack **stack)
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	lastnode = *stack;
-	*stack = (*stack)->next;
-	iter = *stack;
+	lastnode = *stack; // reservamos stack en posicion inicial
+	*stack = (*stack)->next; // desplazamos el stack principal
+	iter = *stack; // ahora utilizamos stack puntero para iterar hasta penultimo
 	while (iter->next)
 		iter = iter->next;
-	iter->next = lastnode;
-	lastnode->next = NULL;
-}
+	iter->next = lastnode; // en el ultimo metemos el primer nodo
+	lastnode->next = NULL; // lo cortamos para que no entre en bucle
