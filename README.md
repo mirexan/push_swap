@@ -105,4 +105,13 @@ void	ft_push(t_stack **taker, t_stack **receiver)
 	*receiver = newnode;
 }
 ```
+### ft_small_sort
 
+Tras investigar sobre las opciones más populares de algoritmos de ordenación,
+radix y método turco de ordenación.
+
+- El **método turco** según entiendo consiste en **agrupar y ordenar por grupos**, presuntamente es más eficiente para la ordenación de numero de argumentos grandes. No vi claro como se manejan los negativos, así que me decanté por radix.
+
+- En **radix** se indexan los números, incluidos lo negativos. Es decir, el número más pequeno tiene el valor de 0. La clave es que los indices se ordenan segun la posicion de los bits del indice. Esto se verá en la seccion de radix. 
+
+Antes de hacer la función principal de ordenación para números grandes
