@@ -24,7 +24,7 @@ int	main(int argc, char *argv[])
 	t_stack	*stack_b;
 
 	stack_b = NULL;
-	if (argc < 2)
+	if (argc < 2 || (argc == 2 && argv[1][0] == '\0'))
 		return (0);
 	stack_a = ft_treat_args(argc, argv);
 	if (!stack_a)
