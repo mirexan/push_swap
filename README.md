@@ -6,6 +6,7 @@
   - [Recopilar ingredientes](#Recopilar-ingredientes)
   - [Procesar argumentos](#Procesar-argumentos)
   - [Funciones de movimiento](#Funciones-de-movimiento)
+  - [indexación](#indexación)
 
 ## Enunciado
 
@@ -105,7 +106,7 @@ void	ft_push(t_stack **taker, t_stack **receiver)
 	*receiver = newnode;
 }
 ```
-### indexación && ft_small_sort
+### indexación
 
 A la hora de enfrentar el tema principal, que son los algoritmos de ordenación, me puse a investigar sobre las opciones más populares a la hora de encarar el push_swap.Siendo radix y el método turco de ordenación (también llamado turco).
 
@@ -114,4 +115,14 @@ A la hora de enfrentar el tema principal, que son los algoritmos de ordenación,
 - En **radix** se indexan los números, incluidos lo negativos. Es decir, el número más pequeno tiene el valor de 0. La clave es que los indices se ordenan segun la posicion de los bits del indice. Esto se verá en la seccion de radix. 
 
 Me gustó la idea de los índices, **pensé que teniendo los números indexados tendría el problema "medio-hecho"**. Por ello, inclui el valor int index a mi estructura s_stack y me puse a hacer la función **ft_add_index.c**, que **ańade el valor de indice a cada nodo**.Al hacer las pruebas de que este paso estuviese ok con el main, caí en la cuenta de que no tenía hecha la **comprobacion de si los numeros ya venian ordenados**. Asi que hice la funcion **ft_ is_sorted.c** basandome en los indices.
+
+### ft_small_sort
+
+Por la forma que tiene de funcionar radix (se ordena mediante los bits del numero del indice) para valores pequeńos es poco eficiente. Pues por ejemplo con 5 números, estos se indexarian de 0 al 4, siendo 4 en binario "1 0 0".Teniendo en cuenta que por cada bit hace que varios valores hagan pb y pa, ser'ia poco eficiente usar radix.
+
+usando radix para 5 valores :
+![sort_5_radix](https://github.com/user-attachments/assets/6b4bf3cd-4f42-4e42-b3b2-21113b24ab25)
+
+usando ft_small_sort :
+![sort_5_ft_small_sort](https://github.com/user-attachments/assets/97f0da42-5df0-403d-bec1-893aab7ca80d)
 
