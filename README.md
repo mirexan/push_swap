@@ -105,13 +105,13 @@ void	ft_push(t_stack **taker, t_stack **receiver)
 	*receiver = newnode;
 }
 ```
-### ft_small_sort
+### indexación && ft_small_sort
 
-Tras investigar sobre las opciones más populares de algoritmos de ordenación,
-radix y método turco de ordenación.
+A la hora de enfrentar el tema principal, que son los algoritmos de ordenación, me puse a investigar sobre las opciones más populares a la hora de encarar el push_swap.Siendo radix y el método turco de ordenación (también llamado turco).
 
 - El **método turco** según entiendo consiste en **agrupar y ordenar por grupos**, presuntamente es más eficiente para la ordenación de numero de argumentos grandes. No vi claro como se manejan los negativos, así que me decanté por radix.
 
 - En **radix** se indexan los números, incluidos lo negativos. Es decir, el número más pequeno tiene el valor de 0. La clave es que los indices se ordenan segun la posicion de los bits del indice. Esto se verá en la seccion de radix. 
 
-Antes de hacer la función principal de ordenación para números grandes
+Me gustó la idea de los índices, **pensé que teniendo los números indexados tendría el problema "medio-hecho"**. Por ello, inclui el valor int index a mi estructura s_stack y me puse a hacer la función **ft_add_index.c**, que **ańade el valor de indice a cada nodo**.Al hacer las pruebas de que este paso estuviese ok con el main, caí en la cuenta de que no tenía hecha la **comprobacion de si los numeros ya venian ordenados**. Asi que hice la funcion **ft_ is_sorted.c** basandome en los indices.
+
