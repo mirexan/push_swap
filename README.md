@@ -120,9 +120,4 @@ Me gustó la idea de los índices, **pensé que teniendo los números indexados 
 
 Por la forma que tiene de funcionar radix (se ordena mediante los bits del numero del indice) para valores pequeńos es poco eficiente. Pues por ejemplo con 5 números, estos se indexarian de 0 al 4, siendo 4 en binario "1 0 0".Teniendo en cuenta que por cada bit hace que varios valores hagan pb y pa, ser'ia poco eficiente usar radix.
 
-usando radix para 5 valores :
-![sort_5_radix](https://github.com/user-attachments/assets/6b4bf3cd-4f42-4e42-b3b2-21113b24ab25)
-
-usando ft_small_sort :
-![sort_5_ft_small_sort](https://github.com/user-attachments/assets/97f0da42-5df0-403d-bec1-893aab7ca80d)
 
