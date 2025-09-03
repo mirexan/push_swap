@@ -45,3 +45,4 @@ void	ft_rotate(t_stack **stack)
 		iter = iter->next;
 	iter->next = lastnode; // en el ultimo metemos el primer nodo
 	lastnode->next = NULL; // lo cortamos para que no entre en bucle
+}
